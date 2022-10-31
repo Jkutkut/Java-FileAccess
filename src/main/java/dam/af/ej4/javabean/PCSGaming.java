@@ -1,11 +1,12 @@
 package dam.af.ej4.javabean;
 
 import dam.af.ej3.aleaSeq.javabean.PCGaming;
+import jkutkut.dom.write.NodeXML;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PCSGaming implements Serializable {
+public class PCSGaming implements Serializable, NodeXML {
     private static final long serialVersionUID = 1L;
     private final ArrayList<PCGaming> pcs;
 
@@ -19,5 +20,18 @@ public class PCSGaming implements Serializable {
 
     public void addPCGaming(PCGaming pc) {
         pcs.add(pc);
+    }
+
+
+    // WriteXML interface
+
+    @Override
+    public String nodeName() {
+        return "pcs_gaming";
+    }
+
+    @Override
+    public ArrayList<Object> nodeValues() {
+        return new ArrayList<Object>(pcs);
     }
 }

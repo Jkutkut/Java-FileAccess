@@ -4,6 +4,7 @@ import com.thoughtworks.xstream.XStream;
 import dam.af.ej3.aleaSeq.javabean.PCGaming;
 import dam.af.ej4.javabean.PCSGaming;
 import jkutkut.dom.ReadXML;
+import jkutkut.dom.write.WriteXML;
 
 import java.io.*;
 
@@ -11,6 +12,7 @@ public class InsertPCGamingObj {
 
     private static final String DATA_FILENAME = dam.af.ej3.aleaSeq.InsertPCGamingObj.FILENAME;
     private static final String XML_FILENAME = "res/xml/PCSGaming.xml";
+    private static final String XML_FILENAME_DOM = "res/xml/PCSGaming_dom.xml";
 
     public static void main(String[] args) {
         PCSGaming data = loadData();
@@ -18,6 +20,10 @@ public class InsertPCGamingObj {
         saveXML(data, XML_FILENAME);
 
         ReadXML.printDocumentXML(XML_FILENAME);
+
+        WriteXML.generateXML(XML_FILENAME_DOM, data);
+
+        ReadXML.printDocumentXML(XML_FILENAME_DOM);
     }
 
     private static void saveXML(PCSGaming pcs, String filename) {
