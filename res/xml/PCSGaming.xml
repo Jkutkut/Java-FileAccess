@@ -1,0 +1,35 @@
+<pcs__gaming>
+  <pc>
+    <id>0</id>
+    <modelo>Lenovo XV3</modelo>
+    <marca>Lenovo</marca>
+    <procesador>
+      <nombre>Intel Core i7-7700K</nombre>
+      <velocidad>4.2</velocidad>
+    </procesador>
+    <ram>16</ram>
+    <precio>1000</precio>
+  </pc>
+  <pc>
+    <id>1</id>
+    <modelo>Lenovo XV4</modelo>
+    <marca>Lenovo</marca>
+    <procesador>
+      <nombre>Intel Core i7-5700K</nombre>
+      <velocidad>4.4</velocidad>
+    </procesador>
+    <ram>16</ram>
+    <precio>3000</precio>
+  </pc>
+  <pc>
+    <id>2</id>
+    <modelo>Lenovo XV5</modelo>
+    <marca>Lenovo</marca>
+    <procesador>
+      <nombre>Intel Core i7-77600K</nombre>
+      <velocidad>4.3</velocidad>
+    </procesador>
+    <ram>32</ram>
+    <precio>1200</precio>
+  </pc>
+</pcs__gaming>
