@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<pcs_gaming>PCGaming{
-	id = 0,
-	modelo = 'Lenovo XV3',
-	marca = 'Lenovo',
-	procesador = Procesador{nombre='Intel Core i7-7700K', velocidad=4.2},
-	ram = 16,
-	precio = 1000
-}PCGaming{
-	id = 1,
-	modelo = 'Lenovo XV4',
-	marca = 'Lenovo',
-	procesador = Procesador{nombre='Intel Core i7-5700K', velocidad=4.4},
-	ram = 16,
-	precio = 3000
-}PCGaming{
-	id = 2,
-	modelo = 'Lenovo XV5',
-	marca = 'Lenovo',
-	procesador = Procesador{nombre='Intel Core i7-77600K', velocidad=4.3},
-	ram = 32,
-	precio = 1200
-}</pcs_gaming>
+<pcs_gaming>
+    <pc>
+        <id>0</id>
+        <modelo>Lenovo XV3</modelo>
+        <marca>Lenovo</marca>
+        <ram>16</ram>
+        <precio>1000</precio>
+    </pc>
+    <pc>
+        <id>1</id>
+        <modelo>Lenovo XV4</modelo>
+        <marca>Lenovo</marca>
+        <ram>16</ram>
+        <precio>3000</precio>
+    </pc>
+    <pc>
+        <id>2</id>
+        <modelo>Lenovo XV5</modelo>
+        <marca>Lenovo</marca>
+        <ram>32</ram>
+        <precio>1200</precio>
+    </pc>
+</pcs_gaming>

@@ -41,14 +41,22 @@ public class WriteXML {
     }
 
     private static void fillNode(Document doc, Element parent, NodeXML node) {
+        Element child;
+        Text text;
+        FieldXML field;
+        NodeXML childNode;
         for (Object ele : node.nodeValues()) {
             if (ele instanceof NodeXML) {
-                Element child = doc.createElement(((NodeXML) ele).nodeName());
-                fillNode(doc, child, (NodeXML) ele);
+                childNode = (NodeXML) ele;
+                child = doc.createElement(childNode.nodeName());
+                fillNode(doc, child, childNode);
                 parent.appendChild(child);
-            } else {
-                Text text = doc.createTextNode(ele.toString());
-                parent.appendChild(text);
+            } else if (ele instanceof FieldXML) {
+                field = (FieldXML) ele;
+                child = doc.createElement(field.getName());
+                text = doc.createTextNode(field.getStringValue());
+                child.appendChild(text);
+                parent.appendChild(child);
             }
         }
     }

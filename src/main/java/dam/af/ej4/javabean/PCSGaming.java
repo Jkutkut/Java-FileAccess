@@ -31,7 +31,10 @@ public class PCSGaming implements Serializable, NodeXML {
     }
 
     @Override
-    public ArrayList<Object> nodeValues() {
-        return new ArrayList<Object>(pcs);
+    public Object[] nodeValues() {
+        Object[] values = new Object[pcs.size()];
+        for (int i = 0; i < pcs.size(); i++)
+            values[i] = pcs.get(i);
+        return values;
     }
 }
