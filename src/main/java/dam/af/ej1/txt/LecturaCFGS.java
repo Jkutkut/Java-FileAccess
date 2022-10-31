@@ -13,6 +13,24 @@ public class LecturaCFGS {
 
     public static void main(String[] args) {
         try {
+            // Mode 1
+            BufferedReader br = new BufferedReader(new FileReader(FICHERO));
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] elements = line.split(DELIMITER_ELEMENTS);
+                System.out.println("**************************************");
+                for (int i = 0; i < elements.length; i++) {
+                    System.out.printf(
+                            "%s%s\n",
+                            FIELDS[i],
+                            elements[i]
+                    );
+                }
+                System.out.println("**************************************");
+            }
+
+            System.out.println("\n\n\n\n");
+            // Mode 2
             InputStreamReader isr = new InputStreamReader(new FileInputStream(FICHERO), "UTF-8");
             System.out.println("Leyendo fichero " + FICHERO);
 
